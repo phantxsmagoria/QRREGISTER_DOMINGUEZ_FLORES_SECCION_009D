@@ -1,0 +1,131 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  
+          defaultHref="/"
+          text=""
+          color="duoc"
+          mode="ios"> </ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<!-- COMIENZO ION CONTENT-->
+
+
+<ion-content class="background">
+
+  <div>
+
+        <ion-card class="ancho cajita inicio">
+
+          <ion-card-content class="ion-text-center">
+            <!-- LOGO -->
+            <img class="logopadding" width="45%" src="assets/logo.png" alt="">
+            
+            <div>
+              <img src="assets/divider.png" alt="">
+              <b><p class="subtitulo"> Registro </p></b>
+              <b><p class="titulo">Docente</p></b>
+            </div>
+
+            <!-- BOTONES -->
+              <div class="padding-boton">
+
+              
+                <form #formulario="ngForm" (ngSubmit) ="onSubmit()">   
+                  
+                  <ion-item>
+                    <ion-label class="smalltext">Primer nombre: </ion-label>
+                    <ion-input type="text" class="smalltext" placeholder="Primer nombre"
+                               name="primernombre" [(ngModel)]= "usuario.primernombre" required>
+                    </ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label class="smalltext">Segundo nombre: </ion-label>
+                    <ion-input type="text" class="smalltext" placeholder="Segundo nombre"
+                               name="segundonombre" [(ngModel)]= "usuario.segundonombre" required>
+                    </ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label class="smalltext">Apellido paterno: </ion-label>
+                    <ion-input type="text" class="smalltext" placeholder="Apellido paterno"
+                               name="primerapellido" [(ngModel)]= "usuario.primerapellido" required>
+                    </ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label class="smalltext">Apellido materno: </ion-label>
+                    <ion-input type="text" class="smalltext" placeholder="Apellido materno"
+                               name="segundoapellido" [(ngModel)]= "usuario.segundoapellido" required>
+                    </ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label class="smalltext">Edad: </ion-label>
+                    <ion-input type="number" class="smalltext" placeholder="edad"
+                               name="edad" [(ngModel)]= "usuario.edad" required>
+                    </ion-input>
+                  </ion-item>
+                  
+                  <ion-item>
+                    <ion-label class="smalltext">Fecha de nacimiento </ion-label>
+                    <ion-input type="text" class="smalltext" placeholder="DD/MM/AAAA"
+                               name="fechadenacimiento" [(ngModel)]= "usuario.fechadenacimiento" required>
+                    </ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label class="smalltext">Escuela: </ion-label>
+                    <ion-select>
+                      <ion-select-option class="smalltext" value="brown">Informática y Telecomunicaciones.</ion-select-option>
+                      <ion-select-option class="smalltext" value="blonde">Salud.</ion-select-option>
+                      <ion-select-option class="smalltext" value="black">Auditoría.</ion-select-option>
+                      <ion-select-option class="smalltext" value="red">Administración.</ion-select-option>
+                    </ion-select>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label class="smalltext">Ramo a impartir: </ion-label>
+                    <ion-input type="text" class="smalltext" placeholder="Carrera"
+                               name="carrera" [(ngModel)]= "usuario.ramoaimpartir" required>
+                    </ion-input>
+                  </ion-item>
+
+
+                  <ion-item>
+                    <ion-label class="smalltext">Correo: </ion-label>
+                    <ion-input  class="smalltext" type="email" placeholder="ejemplo@duoc.cl"
+                               name="email" value="" [(ngModel)]= "usuario.email"
+                               pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                               required>
+                    </ion-input>
+                  </ion-item>
+
+             
+                  <ion-item>
+                    <ion-label class="smalltext">Contraseña: </ion-label>
+                    <ion-input class="smalltext" type="password" placeholder=""
+                               name="password" value="" [(ngModel)]= "usuario.password"
+                               required>
+                    </ion-input>
+                  </ion-item>
+              
+                  <ion-button class="botonesiniciosesion distancia" [disabled] ="formulario.invalid" routerLink="/profe">
+                    ¡Ingresa!
+                  </ion-button>
+              
+                </form>
+
+              </div>
+
+          </ion-card-content>
+
+        </ion-card>
+
+  </div>
+</ion-content>

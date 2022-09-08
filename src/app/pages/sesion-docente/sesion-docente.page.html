@@ -1,0 +1,76 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  
+          defaultHref="/"
+          text=""
+          color="duoc"
+          mode="ios"> </ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<!-- COMIENZO ION CONTENT-->
+
+
+<ion-content class="background no-scroll">
+
+  <div >
+
+        <ion-card class="ancho cajita inicio">
+
+          <ion-card-content class="ion-text-center">
+            <!-- LOGO -->
+            <img class="logopadding" width="45%" src="assets/logo.png" alt="">
+            
+            <div>
+              <img src="assets/divider.png" alt="">
+              <b><p class="subtitulo"> Inicio sesión </p></b>
+              <b><p class="titulo">Docente</p></b>
+            </div>
+
+            <!-- BOTONES -->
+              <div class="padding-boton">
+
+              
+                <form #formulario="ngForm" (ngSubmit) ="onSubmit()">            
+              
+                  <ion-item>
+                    <ion-label class="smalltext">Correo: </ion-label>
+                    <ion-input  class="smalltext" type="email" placeholder="ejemplo@duoc.cl"
+                               name="email" value="" [(ngModel)]= "usuario.email"
+                               pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                               required>
+                    </ion-input>
+                  </ion-item>
+              
+                  <ion-item>
+                    <ion-label class="smalltext">Contraseña: </ion-label>
+                    <ion-input class="smalltext" type="password" placeholder=""
+                               name="password" value="" [(ngModel)]= "usuario.password"
+                               required>
+                    </ion-input>
+                  </ion-item>
+              
+                  <ion-button class="botonesiniciosesion distancia" [disabled] ="formulario.invalid" routerLink="/profe">
+                    ¡Ingresa!
+                  </ion-button>
+
+                  <div>
+                    <img src="assets/divider.png" alt="">
+                    <b><p class="subtitulo colorcontra" > ¿Olvidaste tu contraseña? </p></b>
+                  </div>
+              
+                </form>
+
+              </div>
+
+          </ion-card-content>
+
+        </ion-card>
+
+  </div>
+</ion-content>
+

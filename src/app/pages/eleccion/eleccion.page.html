@@ -1,0 +1,51 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  
+          defaultHref="/"
+          text=""
+          color="duoc"
+          mode="ios">
+     </ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- COMIENZO ION CONTENT-->
+<ion-content class="background no-scroll">
+
+  <div class="padding-top">
+
+        <ion-card class="ancho cajita inicio">
+
+          <ion-card-content class="ion-text-center">
+            <!-- LOGO -->
+            <img class="logopadding" width="45%" src="assets/logo.png" alt="">
+            
+            <div>
+              <img src="assets/divider.png" alt="">
+              <b><p class="subtitulo"> Inicio de sesion </p></b>
+              <b><p class="titulo">¡Selecciona usuario!</p></b>
+            </div>
+
+            <!-- BOTONES -->
+              <div class="padding-boton">
+
+
+                <ion-button class="botonesinicio" routerLink="/sesion-alumno">
+                Alumno
+                </ion-button>
+              
+                <ion-button class="botonesinicio"  routerLink="/sesion-docente">
+                Docente
+                </ion-button>
+
+              </div>
+
+          </ion-card-content>
+
+        </ion-card>
+
+  </div>
+</ion-content>
